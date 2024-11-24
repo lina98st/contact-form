@@ -1,0 +1,176 @@
+@font-face {
+  font-family: 'Karla';
+  src: url('./assets/fonts/Karla-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* Variable Font mit Gewicht von 100 bis 900 */
+}
+
+@font-face {
+  font-family: 'Karla Italic';
+  src: url('./assets/fonts/Karla-Italic-VariableFont_wght.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 100 900;
+}
+
+:root {
+  /* Farbpalette */
+  --green-200: hsl(148, 38%, 91%);
+  --green-600: hsl(169, 82%, 27%);
+  --red: hsl(0, 66%, 54%);
+
+  /* Neutrale Farben */
+  --white: hsl(0, 0%, 100%);
+  --grey-500: hsl(186, 15%, 59%);
+  --grey-900: hsl(187, 24%, 22%);
+}
+ 
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Karla', sans-serif;
+  background-color: var(--green-200);
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  margin: 5rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: var(--white);
+  color: var(--grey-900);
+  font-size: 16px;
+  max-width: 1440px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+
+div input {
+  cursor: pointer;
+  margin: 0.2rem
+}
+
+h2 {
+  margin-bottom: 2rem;  /* Abstand unter der Überschrift */
+}
+
+div {
+  margin-bottom: 1.5rem;  /* Abstand zwischen den Formularfeldern (1.5rem entspricht etwa 24px) */
+}
+
+.consent {
+margin: 0.3rem;
+}
+
+.button-container {
+  display: flex; /* Flexbox für den Container */
+}
+
+button {
+  background-color: var(--green-600);
+  color: var(--white);
+  border-radius: 0.3rem;
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+}
+
+input[type="radio"] {
+  margin-right: 0.625rem;  /* Abstand zwischen den Radio-Buttons */
+}
+
+input[type="text"] {
+  border: 1px solid var(--grey-500);
+  border-radius: 0.2rem;
+}
+
+.mailField {
+display: flex;
+}
+
+input[type="email"] {
+  flex: 1;
+  border: 1px solid var(--grey-500);
+  border-radius: 0.2rem;
+}
+
+.formMail {
+  display: block;         
+  margin-bottom: 0.5rem;     
+}
+
+.message-container {
+  display: flex; /* Flex-Container aktivieren */
+}
+
+textarea#message {
+  flex: 1; /* Textfeld nimmt den gesamten verfügbaren Platz ein */
+}
+
+.messageArea {
+  display: block;         
+  margin-bottom: 0.5rem; 
+}
+
+.queryArea {
+  display: block;         
+  margin-bottom: 0.5rem; 
+}
+
+input[type="checkbox"] {
+margin-right: 0.3rem;
+}
+
+input[type="radio"] {
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.radio-container {
+  display: inline-block; 
+  border: 1px solid var(--grey-500); 
+  border-radius: 0.2rem; 
+  margin-right: 0.5rem;
+  padding: 1rem;
+  flex: 1;
+}
+
+.radio-container input[type="radio"] {
+  margin-right: 0.5rem; 
+}
+
+.RadioStyle {
+  display: flex;
+}
+
+
+.form-row {
+  display: flex; /* Nebeneinander anordnen */
+  gap: 1rem;
+}
+
+
+.form-row label {
+  flex: 1; 
+
+}
+
+.form-row input {
+  flex: 1; 
+}
+
+.message-container {
+  display: flex;
+  width: 100%; /* Stellt sicher, dass der Container die volle Breite einnimmt */
+}
+
+textarea#message {
+  flex: 1; /* Das Textfeld nimmt den gesamten verfügbaren Platz ein */
+  height: 8rem; /* Höhe des Textfeldes anpassen */
+  border: 1px solid var(--grey-500); /* Rahmen */
+  border-radius: 0.2rem; /* Abgerundete Ecken (optional) */
+}
+
