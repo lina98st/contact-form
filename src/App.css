@@ -12,12 +12,10 @@
 }
 
 :root {
-  /* Farbpalette */
   --green-200: hsl(148, 38%, 91%);
   --green-600: hsl(169, 82%, 27%);
   --red: hsl(0, 66%, 54%);
 
-  /* Neutrale Farben */
   --white: hsl(0, 0%, 100%);
   --grey-500: hsl(186, 15%, 59%);
   --grey-900: hsl(187, 24%, 22%);
@@ -273,5 +271,66 @@ input {
   .error {
     font-size: 0.75rem; 
     margin-top: 0.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  form {
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 400px; /* Breiter für Standard-Smartphones */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-group,
+  .mailField,
+  .message-container,
+  .RadioStyle,
+  .button-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  textarea#message {
+    height: 6rem; /* Mittelgroße Höhe */
+  }
+
+  .radio-container {
+    width: 100%; /* Volle Breite */
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    width: 100%;
+    margin: 0.8rem 0;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  label {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .error {
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
   }
 }

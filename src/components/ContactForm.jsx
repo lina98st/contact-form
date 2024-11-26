@@ -100,6 +100,7 @@ function ContactForm() {
                 />
             </div>
             {errors.email && <div className="error">{errors.email}</div>}
+            
             <label className="queryArea">Query Type <span>*</span></label>
             <div className="RadioStyle">
                 <div className="radio-container">
