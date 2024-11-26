@@ -204,85 +204,18 @@ input {
   padding: 0; 
 }
 
-@media (max-width: 375px) {
-  
-  body {
-    flex-direction: column; 
-    align-items: center; 
-    padding: 1rem; 
-  }
-
-  form {
-    margin: 1rem;
-    padding: 1rem;
-    width: 100%; 
-    max-width: 375px; 
-  }
-
-  h2 {
-    font-size: 1.5rem; 
-    text-align: center;
-  }
-
-  .form-row {
-    flex-direction: column; 
-    gap: 0.5rem; 
-  }
-
-  .mailField,
-  .message-container,
-  .RadioStyle,
-  .button-container {
-    flex-direction: column; 
-  }
-
-  .RadioStyle {
-    gap: 0; 
-  }
-
-  .radio-container {
-    width: 100%; 
-    padding: 0.5rem;
-    margin-bottom: 0.5rem; 
-  }
-
-  input[type="radio"] {
-    margin-bottom: 0.2rem; 
-  }
-
-  textarea#message {
-    height: 6rem; 
-  }
-
-  label {
-    font-size: 1rem; 
-    margin-bottom: 0.3rem;
-  }
-
-  .button-container {
-    margin-top: 1rem; 
-  }
-
-  button {
-    width: 100%; 
-    margin: 0; 
-  }
-
-  .error {
-    font-size: 0.75rem; 
-    margin-top: 0.2rem;
-  }
-}
+/*Mobile Ansicht*/
 
 @media (max-width: 768px) {
   body {
+    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem 1rem;
   }
 
   form {
-    margin: 1.5rem auto;
+    margin: 1rem auto;
     padding: 1.5rem;
     width: 100%;
     max-width: 400px; /* Breiter für Standard-Smartphones */
@@ -294,7 +227,7 @@ input {
   }
 
   .form-row {
-    flex-direction: column;
+    flex-direction: column; /* Elemente untereinander */
     gap: 1rem;
   }
 
@@ -304,21 +237,21 @@ input {
   .RadioStyle,
   .button-container {
     flex-direction: column;
-    width: 100%;
+    width: 100%; /* Volle Breite */
   }
 
   textarea#message {
-    height: 6rem; /* Mittelgroße Höhe */
+    height: 6rem; /* Mittelgroße Textarea-Höhe */
   }
 
   .radio-container {
-    width: 100%; /* Volle Breite */
+    width: 100%; /* Radio-Buttons über die gesamte Breite */
     padding: 0.5rem;
     margin-bottom: 0.5rem;
   }
 
   button {
-    width: 100%;
+    width: 100%; /* Button in voller Breite */
     margin: 0.8rem 0;
     padding: 1rem;
     font-size: 1rem;
@@ -332,5 +265,67 @@ input {
   .error {
     font-size: 0.85rem;
     margin-top: 0.3rem;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  form {
+    margin: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 360px; /* Passend für kleine Geräte */
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .form-row {
+    flex-direction: column; /* Elemente untereinander */
+    gap: 0.5rem;
+  }
+
+  .form-group,
+  .mailField,
+  .message-container,
+  .RadioStyle,
+  .button-container {
+    flex-direction: column;
+    width: 100%; /* Volle Breite */
+  }
+
+  textarea#message {
+    height: 5rem; /* Kleinere Textarea-Höhe */
+  }
+
+  .radio-container {
+    width: 100%; /* Radio-Buttons über die gesamte Breite */
+    padding: 0.3rem;
+    margin-bottom: 0.3rem;
+  }
+
+  button {
+    width: 100%; /* Button in voller Breite */
+    margin: 0.5rem 0; /* Mehr Abstand zwischen Buttons */
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  label {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .error {
+    font-size: 0.75rem;
+    margin-top: 0.2rem;
   }
 }
