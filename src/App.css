@@ -1,14 +1,15 @@
 @font-face {
     font-family: 'Karla';
-    src: url('/src/assets/fonts/Karla-VariableFont_wght.ttf') format('truetype');
+    src: url('/assets/fonts/Karla-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900;
 }
 
+
 @font-face {
-    font-family: 'Karla Italic';
-    src: url('/src/assets/fonts/Karla-Italic-VariableFont_wght.ttf') format('truetype');
-    font-style: italic;
-    font-weight: 100 900;
+  font-family: 'Karla Italic';
+  src: url('./assets/fonts/Karla-Italic-VariableFont_wght.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 100 900;
 }
 
 
