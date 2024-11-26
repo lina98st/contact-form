@@ -205,69 +205,28 @@ input {
 
 /*Mobile Ansicht*/
 
-/* Media Queries für Responsivität */
-
-/* Tablets und kleinere Geräte (max-width: 768px) */
 @media (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
   form {
     width: 90%;
+    margin: 0 auto;
     padding: 1rem;
-    margin: 2rem auto;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .form-row {
-    flex-direction: column; /* Stapeln der Eingabefelder */
-    gap: 0.5rem;
-  }
-
-  .form-group {
-    width: 100%; /* Volle Breite nutzen */
-  }
-
-  .RadioStyle {
-    flex-direction: column; /* Radio-Buttons vertikal anordnen */
-    gap: 0.5rem;
-  }
-
-  textarea#message {
-    height: 6rem; /* Weniger Höhe für kleinere Bildschirme */
-  }
-
-  button {
-    padding: 0.8rem;
-    font-size: 1rem;
+    border-radius: 0.5rem;
   }
 }
 
-/* Smartphones und kleinere Geräte (max-width: 480px) */
 @media (max-width: 480px) {
   form {
-    width: 100%; /* Maximale Breite auf sehr kleinen Bildschirmen */
-    margin: 1rem auto;
+    width: 95%;
     padding: 0.8rem;
   }
 
   h2 {
-    font-size: 1.2rem; /* Noch kleinere Überschrift */
+    font-size: 1.4rem;
     text-align: center;
-  }
-
-  input, textarea {
-    font-size: 0.875rem; /* Kleinere Schriftgröße */
-    padding: 0.4rem;
-  }
-
-  button {
-    padding: 0.6rem;
-    font-size: 0.9rem; /* Kleinere Buttons */
-  }
-
-  .radio-container {
-    padding: 0.2rem; /* Weniger Padding für Radio-Buttons */
   }
 }
