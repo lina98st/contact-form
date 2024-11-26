@@ -204,52 +204,84 @@ input {
 
 /*Mobile Ansicht*/
 
-/* Ab 768px (Standard-Smartphones) */
-@media (max-width: 768px) {
+@media screen and (max-width: 620px) {
+  /* Formular-Hauptcontainer */
   form {
-    margin: 1rem auto;
-    padding: 1.5rem;
-    max-width: 400px;
-    width: 100%;
-  }
-
-  .form-row {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .form-group, .mailField, .message-container, .RadioStyle, .button-container {
-    flex-direction: column;
-    width: 100%;
-  }
-}
-
-/* Ab 380px (Kleine Smartphones) */
-@media (max-width: 380px) {
-  form {
-    margin: 0.5rem auto;
+    width: 100%; /* Passt sich an den Bildschirm an */
+    max-width: 340px; /* Schmaleres Layout */
+    margin: 1rem auto; /* Zentriert das Formular */
     padding: 1rem;
-    max-width: 360px;
-    width: 100%;
   }
 
+  h2 {
+    font-size: 1.5rem; /* Kleinere Überschrift */
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  /* Eingabefelder */
   .form-row {
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-direction: column; /* Felder untereinander */
+    gap: 1rem; /* Abstände zwischen Feldern */
   }
 
-  .form-group, .mailField, .message-container, .RadioStyle, .button-container {
-    flex-direction: column;
-    width: 100%;
+  .form-group, 
+  .mailField, 
+  .message-container, 
+  .RadioStyle, 
+  .button-container {
+    flex-direction: column; /* Inhalte in einer Spalte */
+    width: 100%; /* Volle Breite */
+    margin-bottom: 1rem; /* Abstand zwischen Blöcken */
+  }
+
+  /* Textfelder und Textarea */
+  input, textarea {
+    width: 100%; /* Passt sich dem Container an */
+    font-size: 0.9rem; /* Kleinere Schriftgröße */
+    padding: 0.8rem;
   }
 
   textarea#message {
-    height: 5rem;
+    height: 6rem; /* Kleinere Textarea-Höhe */
   }
 
+  /* Radio-Buttons */
+  .RadioStyle {
+    flex-direction: column; /* Radio-Buttons untereinander */
+    gap: 0.5rem;
+  }
+
+  .radio-container {
+    width: 100%; /* Passt sich der Breite an */
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  /* Checkbox */
+  .check-box {
+    align-items: center;
+    max-width: 14em; /* Verhindert Überbreite */
+  }
+
+  input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+  }
+
+  /* Submit-Button */
   button {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 0.9rem;
+    width: 100%; /* Vollbreite auf kleineren Bildschirmen */
+    padding: 1rem; /* Einheitliche Größe */
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* Fehlermeldungen */
+  .error {
+    font-size: 0.75rem;
+    margin-top: 0.3rem;
+    color: var(--red);
   }
 }
