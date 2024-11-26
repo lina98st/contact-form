@@ -1,8 +1,7 @@
-/* Allgemeines Styling */
 @font-face {
   font-family: 'Karla';
   src: url('./assets/fonts/Karla-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
+  font-weight: 100 900; /* Variable Font mit Gewicht von 100 bis 900 */
 }
 
 @font-face {
@@ -15,25 +14,31 @@
 :root {
   --green-200: hsl(148, 38%, 91%);
   --green-600: hsl(169, 82%, 27%);
-  --red: hsl(0, 66%, 54%);
+  --red: hsl(0,rgb(11, 23, 21)
+
   --white: hsl(0, 0%, 100%);
   --grey-500: hsl(186, 15%, 59%);
   --grey-900: hsl(187, 24%, 22%);
 }
+ 
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
 
 * {
-  margin: 0;
+  margin: 0; 
   padding: 0;
   box-sizing: border-box;
-}
+  }
+
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Karla', sans-serif;
   background-color: var(--green-200);
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
 }
 
 form {
@@ -43,85 +48,226 @@ form {
   padding: 1.5rem;
   border-radius: 1rem;
   max-width: 1440px;
-  width: 80%;
-  background-color: var(--white);
+  width: 80%; 
+}
+
+
+div input {
+  cursor: pointer;
+  margin: 0.2rem
 }
 
 h2 {
-  margin-bottom: 2rem;
-  text-align: center;
+  margin-bottom: 2rem;  
 }
 
-.form-row {
-  display: flex;
-  gap: 1rem;
+div {
+  margin-bottom: 1.5rem; 
 }
 
-input, textarea, button {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid var(--grey-500);
-  border-radius: 4px;
+.consent {
+margin: 0.3rem;
+}
+
+.button-container {
+  display: flex; 
 }
 
 button {
   background-color: var(--green-600);
   color: var(--white);
+  border-radius: 0.3rem;
+  flex: 1;
+  padding: 0.5rem;
   border: none;
-  padding: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
+  margin-top: 0.8rem;
 }
 
-/* Mobile Ansicht */
-@media screen and (max-width: 620px) {
+input[type="radio"] {
+  margin-right: 0.625rem;  /* Abstand zwischen den Radio-Buttons */
+}
+
+input[type="text"] {
+  border: 1px solid var(--grey-500);
+  border-radius: 0.2rem;
+}
+
+.mailField {
+display: flex;
+margin-bottom: 0.5rem;
+}
+
+input[type="email"] {
+  flex: 1;
+  border: 1px solid var(--grey-500);
+  border-radius: 0.2rem;
+}
+
+.formMail {
+  display: block;         
+  margin-bottom: 0.5rem;     
+}
+
+
+
+.message-container {
+  display: flex; 
+}
+
+textarea#message {
+  flex: 1; 
+}
+
+.messageArea {
+  display: block;         
+  margin-bottom: 0.5rem; 
+}
+
+.queryArea {
+  display: block;         
+}
+
+input[type="checkbox"] {
+margin-right: 0.3rem;
+}
+
+
+.RadioStyle {
+  display: flex;
+  gap: 10px;
+  margin: 1rem 0 1rem 0;
+}
+
+.radio-container {
+  display: inline-block; 
+  border: 1px solid var(--grey-500); 
+  border-radius: 0.2rem; 
+  padding: 0.3rem;
+  flex: 1;
+  margin: 0;
+}
+
+
+.form-row label {
+  flex: 1; 
+
+}
+
+.form-row input {
+  flex: 1; 
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea#message {
+  flex: 1; 
+  height: 8rem; 
+  border: 1px solid var(--grey-500); /* Rahmen */
+  border-radius: 0.2rem; /* Abgerundete Ecken (optional) */
+}
+
+
+.form-row {
+  display: flex;            
+  gap: 1rem;                
+     
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;   /* Eingabefeld und Fehlermeldung untereinander */
+  flex: 1;      
+  margin: 0;
+  padding: 0;          
+}
+
+label {
+  margin-bottom: 0.5rem;    
+}
+
+input {
+  padding: 0.5rem;         
+  font-size: 1rem;          
+  border: 1px solid #ccc;   
+  border-radius: 4px;       
+}
+
+.error {
+  color: var(--red);         
+  font-size: 0.875rem;      
+  margin-top: 0.4rem;    
+  margin-bottom: 0.4rem;
+  padding: 0; 
+}
+
+/*Mobile Ansicht*/
+
+/* Media Queries für Responsivität */
+
+/* Tablets und kleinere Geräte (max-width: 768px) */
+@media (max-width: 768px) {
   form {
-    width: 100%;
-    max-width: 320px;
-    margin: 1rem auto;
+    width: 90%;
     padding: 1rem;
+    margin: 2rem auto;
   }
 
   h2 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    text-align: center;
   }
 
-  .form-row, .mailField, .message-container, .RadioStyle, .button-container {
-    display: block;
-    width: 100%;
-    margin-bottom: 1rem;
+  .form-row {
+    flex-direction: column; /* Stapeln der Eingabefelder */
+    gap: 0.5rem;
   }
 
-  input, textarea {
-    display: block;
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 0.9rem;
-  }
-
-  textarea#message {
-    height: 6rem;
+  .form-group {
+    width: 100%; /* Volle Breite nutzen */
   }
 
   .RadioStyle {
-    display: block;
+    flex-direction: column; /* Radio-Buttons vertikal anordnen */
+    gap: 0.5rem;
   }
 
-  .radio-container {
-    display: block;
-    margin-bottom: 0.5rem;
+  textarea#message {
+    height: 6rem; /* Weniger Höhe für kleinere Bildschirme */
   }
 
   button {
-    display: block;
-    width: 100%;
-    padding: 1rem;
+    padding: 0.8rem;
     font-size: 1rem;
   }
+}
 
-  .error {
-    font-size: 0.75rem;
-    color: var(--red);
+/* Smartphones und kleinere Geräte (max-width: 480px) */
+@media (max-width: 480px) {
+  form {
+    width: 100%; /* Maximale Breite auf sehr kleinen Bildschirmen */
+    margin: 1rem auto;
+    padding: 0.8rem;
+  }
+
+  h2 {
+    font-size: 1.2rem; /* Noch kleinere Überschrift */
+    text-align: center;
+  }
+
+  input, textarea {
+    font-size: 0.875rem; /* Kleinere Schriftgröße */
+    padding: 0.4rem;
+  }
+
+  button {
+    padding: 0.6rem;
+    font-size: 0.9rem; /* Kleinere Buttons */
+  }
+
+  .radio-container {
+    padding: 0.2rem; /* Weniger Padding für Radio-Buttons */
   }
 }
