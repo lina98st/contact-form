@@ -205,28 +205,62 @@ input {
 
 /*Mobile Ansicht*/
 
+/* Mobile Ansicht: Formular schmal mit Feldern untereinander */
 @media (max-width: 768px) {
   body {
     padding: 0;
     margin: 0;
+    background-color: var(--green-200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   form {
-    width: 90%;
-    margin: 0 auto;
+    width: 90%; /* Formular ist schmal mit sichtbarem Hintergrund an den Seiten */
+    margin: 1rem auto; /* Zentriert mit Abstand oben/unten */
     padding: 1rem;
-    border-radius: 0.5rem;
+    border-radius: 0.5rem; /* Leicht abgerundete Ecken */
+    box-sizing: border-box;
+    background: var(--white);
+  }
+
+  .form-row {
+    flex-direction: column; /* Stapelt Felder untereinander */
+    gap: 1rem; /* Abstand zwischen Feldern */
+  }
+
+  .form-group, .RadioStyle, .message-container, .button-container {
+    width: 100%; /* Breite der Felder */
+  }
+
+  button {
+    padding: 1rem;
+    font-size: 1rem;
   }
 }
 
+/* Sehr kleine Bildschirme */
 @media (max-width: 480px) {
   form {
-    width: 95%;
+    width: 95%; /* Noch schmaler für sehr kleine Bildschirme */
+    margin: 0.5rem auto;
     padding: 0.8rem;
+    border-radius: 0.5rem;
   }
 
   h2 {
     font-size: 1.4rem;
-    text-align: center;
+    text-align: center; /* Überschrift zentrieren */
+  }
+
+  input, textarea {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.8rem;
   }
 }
