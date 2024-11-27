@@ -1,41 +1,38 @@
 @font-face {
-  font-family: 'Karla';
-  src: url('/assets/fonts/Karla-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
+    font-family: 'Karla';
+    src: url('/assets/fonts/Karla-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
 }
+
 
 @font-face {
   font-family: 'Karla Italic';
-  src: url('/assets/fonts/Karla-Italic-VariableFont_wght.ttf') format('truetype');
+  src: url('./assets/fonts/Karla-Italic-VariableFont_wght.ttf') format('truetype');
   font-style: italic;
   font-weight: 100 900;
 }
-
 
 
 :root {
   --green-200: hsl(148, 38%, 91%);
   --green-600: hsl(169, 82%, 27%);
   --red: hsl(0, 66%, 54%);
+
   --white: hsl(0, 0%, 100%);
   --grey-500: hsl(186, 15%, 59%);
-  --grey-900: hsl(187, 24%, 22%)
+  --grey-900: hsl(187, 24%, 22%);
 }
+ 
 
-.attribution {
-  font-size: 11px;
-  text-align: center
-}
-
-.attribution a {
-  color: #3e52a3
-}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
 
 * {
-  margin: 0;
+  margin: 0; 
   padding: 0;
   box-sizing: border-box;
-}
+  }
+
 
 body {
   margin: 0;
@@ -44,226 +41,168 @@ body {
   background-color: var(--green-200);
   display: flex;
   justify-content: center;
-  min-height: 100vh;
 }
 
 form {
-  box-sizing: border-box;
-  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 5rem auto;
   padding: 1.5rem;
   border-radius: 1rem;
-  background-color: var(--white);
-  color: var(--grey-900);
-  font-size: 16px;
   max-width: 1440px;
-  box-shadow: 0 4px 8px #0000001a;
-  width: 90%
+  width: 80%; 
 }
+
 
 div input {
   cursor: pointer;
-  margin: .2rem
+  margin: 0.2rem
 }
 
 h2 {
-  margin-bottom: 2rem
+  margin-bottom: 2rem;  
 }
 
 div {
-  margin-bottom: 1.5rem
+  margin-bottom: 1.5rem; 
 }
 
 .consent {
-  margin: .3rem
+margin: 0.3rem;
 }
 
 .button-container {
-  display: flex
+  display: flex; 
 }
 
 button {
   background-color: var(--green-600);
   color: var(--white);
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   flex: 1;
-  padding: .5rem;
+  padding: 0.5rem;
   border: none;
-  margin-top: .8rem
+  margin-top: 0.8rem;
 }
 
-input[type=radio] {
-  margin-right: .625rem
+input[type="radio"] {
+  margin-right: 0.625rem;  /* Abstand zwischen den Radio-Buttons */
 }
 
-input[type=text] {
+input[type="text"] {
   border: 1px solid var(--grey-500);
-  border-radius: .2rem
+  border-radius: 0.2rem;
 }
 
 .mailField {
-  display: flex;
-  margin-bottom: .5rem
+display: flex;
+margin-bottom: 0.5rem;
 }
 
-input[type=email] {
+input[type="email"] {
   flex: 1;
   border: 1px solid var(--grey-500);
-  border-radius: .2rem
+  border-radius: 0.2rem;
 }
 
 .formMail {
-  display: block;
-  margin-bottom: .5rem
+  display: block;         
+  margin-bottom: 0.5rem;     
 }
 
+
+
 .message-container {
-  display: flex
+  display: flex; 
 }
 
 textarea#message {
-  flex: 1
+  flex: 1; 
 }
 
 .messageArea {
-  display: block;
-  margin-bottom: .5rem
+  display: block;         
+  margin-bottom: 0.5rem; 
 }
 
 .queryArea {
-  display: block
+  display: block;         
 }
 
-input[type=checkbox] {
-  margin-right: .3rem
+input[type="checkbox"] {
+margin-right: 0.3rem;
 }
+
 
 .RadioStyle {
   display: flex;
   gap: 10px;
-  margin: 1rem 0
+  margin: 1rem 0 1rem 0;
 }
 
 .radio-container {
-  display: inline-block;
-  border: 1px solid var(--grey-500);
-  border-radius: .2rem;
-  padding: .3rem;
+  display: inline-block; 
+  border: 1px solid var(--grey-500); 
+  border-radius: 0.2rem; 
+  padding: 0.3rem;
   flex: 1;
-  margin: 0
+  margin: 0;
 }
 
-.form-row label,.form-row input {
-  flex: 1
+
+.form-row label {
+  flex: 1; 
+
+}
+
+.form-row input {
+  flex: 1; 
 }
 
 .message-container {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
 
 textarea#message {
-  flex: 1;
-  height: 8rem;
-  border: 1px solid var(--grey-500);
-  border-radius: .2rem
+  flex: 1; 
+  height: 8rem; 
+  border: 1px solid var(--grey-500); /* Rahmen */
+  border-radius: 0.2rem; /* Abgerundete Ecken (optional) */
 }
 
+
 .form-row {
-  display: flex;
-  gap: 1rem
+  display: flex;            
+  gap: 1rem;                
+     
 }
 
 .form-group {
   display: flex;
-  flex-direction: column;
-  flex: 1;
+  flex-direction: column;   /* Eingabefeld und Fehlermeldung untereinander */
+  flex: 1;      
   margin: 0;
-  padding: 0
+  padding: 0;          
 }
 
 label {
-  margin-bottom: .5rem
+  margin-bottom: 0.5rem;    
 }
 
 input {
-  padding: .5rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px
+  padding: 0.5rem;         
+  font-size: 1rem;          
+  border: 1px solid #ccc;   
+  border-radius: 4px;       
 }
 
 .error {
-  color: var(--red);
-  font-size: .875rem;
-  margin-top: .4rem;
-  margin-bottom: .4rem;
-  padding: 0
-}
-
-@media (max-width: 375px) {
-  body {
-      flex-direction:column;
-      align-items: center;
-      padding: 1rem
-  }
-
-  form {
-      margin: 1rem;
-      padding: 1rem;
-      width: 100%;
-      max-width: 375px
-  }
-
-  h2 {
-      font-size: 1.5rem;
-      text-align: center
-  }
-
-  .form-row {
-      flex-direction: column;
-      gap: .5rem
-  }
-
-  .mailField,.message-container,.RadioStyle,.button-container {
-      flex-direction: column
-  }
-
-  .RadioStyle {
-      gap: 0
-  }
-
-  .radio-container {
-      width: 100%;
-      padding: .5rem;
-      margin-bottom: .5rem
-  }
-
-  input[type=radio] {
-      margin-bottom: .2rem
-  }
-
-  textarea#message {
-      height: 6rem
-  }
-
-  label {
-      font-size: 1rem;
-      margin-bottom: .3rem
-  }
-
-  .button-container {
-      margin-top: 1rem
-  }
-
-  button {
-      width: 100%;
-      margin: 0
-  }
-
-  .error {
-      font-size: .75rem;
-      margin-top: .2rem
-  }
+  color: var(--red);         
+  font-size: 0.875rem;      
+  margin-top: 0.4rem;    
+  margin-bottom: 0.4rem;
+  padding: 0; 
 }
 
 /*Mobile Ansicht*/
@@ -310,3 +249,4 @@ input {
       width: 100%;
   }
 }
+
