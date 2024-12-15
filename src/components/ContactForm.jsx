@@ -129,7 +129,7 @@ function ContactForm() {
             {errors.queryType && <div className="error">{errors.queryType}</div>}
 
             <div>
-                <label className="messageArea">Message <span>*</span></label>
+                <label htmlFor="message" className="messageArea">Message <span>*</span></label>
                 <div className="message-container">
                     <textarea
                         id="message"
