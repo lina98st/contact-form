@@ -57,6 +57,7 @@ function ContactForm() {
     };
 
     return (
+        <main>
         <form onSubmit={handleSubmit}>
             <h2>Contact Us</h2>
 
@@ -159,6 +160,7 @@ function ContactForm() {
                 <button type="submit">Submit</button>
             </div>
         </form>
+            </main>
     );
 }
 
