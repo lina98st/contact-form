@@ -59,7 +59,7 @@ function ContactForm() {
     return (
         <main>
         <form onSubmit={handleSubmit}>
-            <h1>Contact Us</h1>
+            <h2>Contact Us</h2>
 
             <div>
     <div className="form-row">
